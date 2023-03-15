@@ -1,0 +1,547 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-family: prohibition, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #25637B;
+  margin: 0;
+}
+
+h2 {
+  font-family: prohibition, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #414141;
+  margin: 0;
+}
+
+h3 {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: #414141;
+  margin: 0;
+}
+
+h4 {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: #414141;
+  margin: 0;
+}
+
+h5 {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: #414141;
+  margin: 0;
+}
+
+h6 {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: #414141;
+  margin: 0;
+}
+
+label {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: #414141;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+select {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: #414141;
+  margin: 0;
+}
+
+@media (max-width: 53.125rem) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1.02rem;
+  }
+
+  h4 {
+    font-size: 0.84rem;
+  }
+
+  h5 {
+    font-size: 0.72rem;
+  }
+
+  h6 {
+    font-size: 0.6rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  select {
+    font-size: 0.6rem;
+  }
+}
+body {
+  background-color: #FBF6F2;
+  margin: 0 auto;
+}
+body #header {
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+body #header .headerTitle {
+  width: 75vw;
+}
+body #header .headerTitle img {
+  height: 90%;
+}
+body #content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body #content .landingSearch {
+  width: 100vw;
+  background-image: url("../images/landing.jpg");
+  height: 88vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: height 1.5s;
+  transition-timing-function: ease-in-out;
+}
+body #content .landingSearch #searchContainer {
+  width: 60vw;
+  border: 1.2rem #25637B solid;
+  height: 30vh;
+  padding: 0.6rem 3rem;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #FBF6F2;
+}
+@media (max-width: 53.125rem) {
+  body #content .landingSearch #searchContainer {
+    padding: 0.6rem;
+  }
+}
+body #content .landingSearch #searchContainer .searchHeader {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+}
+body #content .landingSearch #searchContainer #searchBox {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+body #content .landingSearch #searchContainer #searchBox .dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin-right: 0.6rem;
+}
+body #content .landingSearch #searchContainer #searchBox .dropdown select {
+  background-color: #FBF6F2;
+  border: 0.0625rem solid #414141;
+}
+@media (max-width: 53.125rem) {
+  body #content .landingSearch #searchContainer #searchBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  body #content .landingSearch #searchContainer #searchBox .dropdown {
+    width: 100%;
+  }
+}
+body #content .landingSearch #searchContainer .searchButtonContainer {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+body #content .landingSearch #searchContainer .searchButtonContainer #searchButton {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #FBF6F2;
+  background-color: #25637B;
+  border: solid 0.0625rem #25637B;
+  width: 40%;
+}
+body #content .landingSearch #searchContainer .searchButtonContainer #searchButton:hover {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #25637B;
+  background-color: #FBF6F2;
+  border: solid 0.0625rem #25637B;
+}
+body #content #cardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  overflow-y: scroll;
+  margin-top: 1.8rem;
+}
+body #content #cardContainer .availableCard {
+  width: 70vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  margin: 1.2rem 0;
+  border: solid 0.0625rem #414141;
+}
+body #content #cardContainer .availableCard .line {
+  background-color: #414141;
+  width: 0.0625rem;
+}
+body #content #cardContainer .availableCard .image {
+  background-size: cover;
+  background-position: center;
+  width: 33%;
+}
+body #content #cardContainer .availableCard .name {
+  width: 33%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body #content #cardContainer .availableCard .accomContent {
+  margin: 0;
+  width: 33%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+body #content #cardContainer .availableCard .accomContent .check {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+body #content #cardContainer .availableCard .card-img {
+  width: 100%;
+}
+body #content #cardContainer .availableCard .infoButton {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #414141;
+  background-color: #FBF6F2;
+  border: solid 0.0625rem #414141;
+}
+body #content #cardContainer .availableCard .button {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #FBF6F2;
+  background-color: #25637B;
+  border: solid 0.0625rem #25637B;
+}
+body #content #cardContainer .availableCard .infoButton:hover {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #FBF6F2;
+  background-color: #414141;
+  border: solid 0.0625rem #414141;
+}
+body #content #cardContainer .availableCard .button:hover {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #25637B;
+  background-color: #FBF6F2;
+  border: solid 0.0625rem #25637B;
+}
+@media (max-width: 53.125rem) {
+  body #content #cardContainer .availableCard {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+  }
+  body #content #cardContainer .availableCard .line {
+    background-color: #414141;
+    height: 0.125rem;
+    width: 100%;
+  }
+  body #content #cardContainer .availableCard .image {
+    width: 100%;
+    height: 33%;
+  }
+  body #content #cardContainer .availableCard .name {
+    width: 100%;
+    height: 33%;
+  }
+  body #content #cardContainer .availableCard .accomContent {
+    width: 100%;
+    height: 33%;
+  }
+  body #content #cardContainer .availableCard .card-img {
+    width: 100%;
+  }
+}
+body #content #cardContainer .notAvailableCard {
+  width: 70vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  margin: 1.2rem 0;
+  border: solid 0.0625rem #414141;
+  opacity: 50%;
+}
+body #content #cardContainer .notAvailableCard .line {
+  background-color: #414141;
+  width: 0.0625rem;
+}
+body #content #cardContainer .notAvailableCard .image {
+  background-size: cover;
+  background-position: center;
+  width: 33%;
+}
+body #content #cardContainer .notAvailableCard .name {
+  width: 33%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body #content #cardContainer .notAvailableCard .accomContent {
+  margin: 0;
+  width: 33%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+body #content #cardContainer .notAvailableCard .accomContent .check {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+body #content #cardContainer .notAvailableCard .card-img {
+  width: 100%;
+}
+body #content #cardContainer .notAvailableCard .infoButton {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #414141;
+  background-color: #FBF6F2;
+  border: solid 0.0625rem #414141;
+}
+body #content #cardContainer .notAvailableCard .button {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #FBF6F2;
+  background-color: #25637B;
+  border: solid 0.0625rem #25637B;
+}
+body #content #cardContainer .notAvailableCard .infoButton:hover {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #FBF6F2;
+  background-color: #414141;
+  border: solid 0.0625rem #414141;
+}
+body #content #cardContainer .notAvailableCard .button:hover {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #25637B;
+  background-color: #FBF6F2;
+  border: solid 0.0625rem #25637B;
+}
+@media (max-width: 53.125rem) {
+  body #content #cardContainer .notAvailableCard {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+  }
+  body #content #cardContainer .notAvailableCard .line {
+    background-color: #414141;
+    height: 0.125rem;
+    width: 100%;
+  }
+  body #content #cardContainer .notAvailableCard .image {
+    width: 100%;
+    height: 33%;
+  }
+  body #content #cardContainer .notAvailableCard .name {
+    width: 100%;
+    height: 33%;
+  }
+  body #content #cardContainer .notAvailableCard .accomContent {
+    width: 100%;
+    height: 33%;
+  }
+  body #content #cardContainer .notAvailableCard .card-img {
+    width: 100%;
+  }
+}
+body #footer {
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  background-color: #FBF6F2;
+  align-items: center;
+}
+body #footer .footerInfo {
+  width: 75%;
+}
+
+.modal {
+  height: 70vh;
+}
+.modal .modalImage {
+  height: 40%;
+  background-size: cover;
+  background-position: center;
+}
+.modal .lineModal {
+  background-color: #414141;
+  height: 0.0625rem;
+  width: 100%;
+}
+.modal .modalText {
+  height: 57%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.modal .modalText .infoButton {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #FBF6F2 !important;
+  background-color: #25637B !important;
+  border: solid 0.0625rem #25637B;
+  width: 20%;
+  text-decoration: none;
+  text-align: center;
+}
+
+.receiptModal {
+  height: 70vh;
+}
+.receiptModal .lineModal {
+  background-color: #414141;
+  height: 0.0625rem;
+  width: 100%;
+}
+.receiptModal .modalText {
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.receiptModal .modalText .infoButton {
+  font-family: unit, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #FBF6F2 !important;
+  background-color: #25637B !important;
+  border: solid 0.0625rem #25637B;
+  width: 20%;
+  text-decoration: none;
+  text-align: center;
+}/*# sourceMappingURL=base.css.map */

@@ -1,0 +1,170 @@
+@import "./reset";
+@import "./essentials";
+@import "./font";
+@import "./mixin";
+
+body {
+    background-color: $themeColour1;
+    margin: 0 auto;
+
+    #header {
+        height: 6vh;
+        @include flexCenter();
+        margin: 0;
+
+        .headerTitle {
+            width: 75vw;
+
+            img {
+                height: 90%;
+            }
+        }
+    }
+
+    #content {
+
+        @include flexColumn();
+
+        align-items: center;
+        justify-content: space-evenly;
+
+        .landingSearch {
+            width: 100vw;
+            background-image: url("../images/landing.jpg");
+            height: 88vh;
+            background-size: cover;
+            background-position: center;
+            @include flexCenter();
+            align-items: center;
+            transition: height 1.5s;
+            transition-timing-function: ease-in-out;
+
+            #searchContainer {
+                width: 60vw;
+                border: $unitSize*2 $themeColour2 solid;
+                height: 30vh;
+                padding: $unitSize $unitSize*5;
+                justify-content: space-evenly;
+                align-items: center;
+                @include flexColumn();
+
+                background-color: $themeColour1;
+
+                @media (max-width: $mediaSize) {
+                    padding: $unitSize;
+                }
+
+
+                .searchHeader {
+                    width: 90%;
+                    display: flex;
+                    justify-content: flex-start;
+                }
+
+                #searchBox {
+                    display: flex;
+                    width: 90%;
+                    justify-content: space-between;
+
+                    .dropdown {
+                        @include dropdown();
+                    }
+
+                    @media (max-width: $mediaSize) {
+
+                        @include flexColumn();
+                        width: 100%;
+
+                        .dropdown {
+                            width: 100%;
+                        }
+
+                    }
+                }
+
+                .searchButtonContainer {
+                    width: 90%;
+                    @include flexCenter();
+
+                    #searchButton {
+                        @include button();
+                        width: 40%;
+                    }
+
+                    #searchButton:hover {
+                        @include buttonHover();
+                    }
+                }
+
+
+            }
+        }
+
+        #cardContainer {
+
+            @include flexColumn;
+            align-items: center;
+            width: 100vw;
+            overflow-y: scroll;
+            margin-top: $unitSize*3;
+
+            .availableCard {
+                @include cardSize;
+
+            }
+
+            .notAvailableCard {
+                @include cardSize;
+                opacity: 50%;
+            }
+        }
+    }
+
+    #footer {
+        height: 6vh;
+        @include flexCenter();
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+        background-color: $themeColour1;
+        align-items: center;
+
+        .footerInfo {
+            width: 75%;
+        }
+    }
+}
+
+.modal {
+    height: 70vh;
+
+    .modalImage {
+        height: 40%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .lineModal {
+        @include lineModal()
+    }
+
+    .modalText {
+        height: 57%;
+        @include modalText ()
+    }
+
+}
+
+.receiptModal {
+    height: 70vh;
+
+    .lineModal {
+        @include lineModal()
+    }
+
+    .modalText {
+        height: 95%;
+        @include modalText ()
+    }
+
+}

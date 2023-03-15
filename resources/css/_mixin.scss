@@ -1,0 +1,195 @@
+@import "./essentials";
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin center {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+@mixin unitFont {
+    font-family: unit, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+@mixin headerFont {
+    font-family: prohibition, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin dropdown {
+    @include flexColumn();
+
+    width: 45%;
+    margin-right: $unitSize;
+
+    select {
+        background-color: $themeColour1;
+        border: $unitSize2 solid $themeColour3;
+    }
+}
+
+@mixin buttonBasics {
+    @include unitFont();
+    font-size: $unitSize*2;
+    margin: 0;
+}
+
+@mixin buttonsmix {
+    @include buttonBasics();
+    color: $themeColour1 !important;
+    background-color: $themeColour2 !important;
+    border: solid $unitSize2 $themeColour2;
+    width: 20%;
+    text-decoration: none;
+    text-align: center
+}
+
+@mixin button {
+    @include buttonBasics();
+    color: $themeColour1;
+    background-color: $themeColour2;
+    border: solid $unitSize2 $themeColour2;
+}
+
+@mixin buttonHover {
+    @include buttonBasics();
+    color: $themeColour2;
+    background-color: $themeColour1;
+    border: solid $unitSize2 $themeColour2;
+}
+
+@mixin cardSize {
+    width: 70vw;
+    height: 30vh;
+    @include flexRow();
+    flex-grow: 1;
+    justify-content: space-evenly;
+    margin: $unitSize*2 0;
+    border: solid $unitSize2 $themeColour3;
+
+    .line {
+        background-color: $themeColour3;
+        width: $unitSize2;
+    }
+
+    .image {
+        background-size: cover;
+        background-position: center;
+        width: 33%;
+    }
+
+    .name {
+        width: 33%;
+        @include center();
+    }
+
+    .accomContent {
+        margin: 0;
+        width: 33%;
+        @include center();
+        height: 100%;
+
+        .check {
+            @include flexRow();
+            justify-content: center;
+        }
+
+    }
+
+
+    .card-img {
+        width: 100%;
+    }
+
+    .infoButton {
+        @include buttonBasics();
+        color: $themeColour3;
+        background-color: $themeColour1;
+        border: solid $unitSize2 $themeColour3;
+    }
+
+    .button {
+        @include button();
+    }
+
+    .infoButton:hover {
+        @include buttonBasics();
+        color: $themeColour1;
+        background-color: $themeColour3;
+        border: solid $unitSize2 $themeColour3;
+    }
+
+    .button:hover {
+        @include buttonHover();
+    }
+
+
+    @media (max-width: $mediaSize) {
+        @include flexColumn();
+        height: 50vh;
+
+        .line {
+            background-color: $themeColour3;
+            height: $unitSize2*2;
+            width: 100%;
+        }
+
+        .image {
+            width: 100%;
+            height: 33%;
+        }
+
+        .name {
+            width: 100%;
+            height: 33%;
+
+        }
+
+        .accomContent {
+            width: 100%;
+            height: 33%;
+        }
+
+
+        .card-img {
+            width: 100%;
+        }
+    }
+
+
+}
+
+@mixin lineModal {
+    background-color: $themeColour3;
+    height: $unitSize2;
+    width: 100%;
+}
+
+@mixin modalText {
+    @include flexColumn;
+    justify-content: space-evenly;
+
+    .infoButton {
+        @include buttonsmix()
+    }
+}
+
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,87 @@
+@import "./_essentials.scss";
+@import "./_mixin.scss";
+
+
+h1 {
+    @include headerFont();
+    color: $themeColour2;
+    margin: 0;
+}
+
+h2 {
+    @include headerFont();
+    color: $themeColour3;
+    margin: 0;
+}
+
+h3 {
+    @include unitFont();
+    color: $themeColour3;
+    margin: 0;
+}
+
+h4 {
+    @include unitFont();
+    color: $themeColour3;
+    margin: 0;
+}
+
+h5 {
+    @include unitFont();
+    color: $themeColour3;
+    margin: 0;
+}
+
+h6 {
+    @include unitFont();
+    color: $themeColour3;
+    margin: 0;
+}
+
+label {
+    @include unitFont();
+    color: $themeColour3;
+    margin: 0;
+    font-size: $unitSize*2;
+}
+
+select {
+    @include unitFont();
+    color: $themeColour3;
+    margin: 0;
+}
+
+@media (max-width: $mediaSize) {
+    h1 {
+        font-size: $unitSize*2.5;
+    }
+
+    h2 {
+        font-size: $unitSize*2;
+    }
+
+    h3 {
+        font-size: $unitSize*1.7;
+    }
+
+    h4 {
+        font-size: $unitSize*1.4;
+    }
+
+    h5 {
+        font-size: $unitSize*1.2;
+    }
+
+    h6 {
+        font-size: $unitSize;
+    }
+
+    label {
+        font-size: $unitSize*1.5;
+    }
+
+    select {
+        font-size: $unitSize;
+    }
+
+}

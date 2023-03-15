@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/xfg3twu.css">
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./resources/css/base.css">
+    <title>Tourism New Zealand Accommodation Finder</title>
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="headerTitle">
+            <img src="./resources/images/logo.png" alt="Tourism New Zealand Logo">
+        </div>
+    </div>
+
+    <div id="content">
+
+        <!-- Search Box -->
+        <div id="searchBackground" class="landingSearch">
+            <div id="searchContainer">
+                <div class="searchHeader">
+                    <h1>Find Accommodation</h1>
+                </div>
+                <div id="searchBox">
+
+                    <div class="dropdown">
+                        <!-- Nights Input -->
+                        <label for="nights">Number of Nights </label>
+                        <select name="nights" id="nights">
+                            <option value="-">-</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                        </select>
+                    </div>
+                    <div class="dropdown">
+                        <!-- People Input -->
+                        <label for="numPeople">Number of People</label>
+                        <select name="numPeople" id="numPeople">
+                            <option value="-">-</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+
+
+                </div>
+                <div>
+                    <h4 class="error"></h4>
+                </div>
+                <div class="searchButtonContainer">
+
+                    <!-- Search Button -->
+                    <input type="button" id="searchButton" value="Search" />
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div id="cardContainer">
+            <div class="available"></div>
+            <div class="notAvailable"></div>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div class="footerInfo">
+            <h6>© Copyright 1999-2022 Tourism New Zealand
+            </h6>
+        </div>
+    </div>
+
+    <script src="./resources/js/source.js"></script>
+</body>
+
+</html>
